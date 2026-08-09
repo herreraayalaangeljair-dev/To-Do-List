@@ -110,37 +110,58 @@
     background-color: #206a2e;
 }
 
-.Formulario-Tareas-btn-editar {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    background-color: #1486ff;
-    position: absolute;
-    cursor: pointer;
-    right: 60px;
-    bottom: 15px;
-}
-
-.Formulario-Tareas-btn-editar:hover {
-    background-color: #003e71;
-}
-
-
-/* Lista de Tareas */
+/* Contenedor de la Tarea */
 .task-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #dee2e6;
+    gap: 12px;
 }
 
+/* Agrupador de Checkbox + Texto */
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.task-printed {
+    margin: 0;
+    font-size: 16px;
+    color: #212529;
+}
+
+/* Checkbox con color personalizado */
 .check-input {
     cursor: pointer;
     width: 18px;
     height: 18px;
+    accent-color: #28a745;
+    /* Usa el verde de tu paleta */
+}
+
+/* Botón Editar Mejorado */
+.Tareas-btn-editar {
+    cursor: pointer;
+    width: 25px;
+    height: 23px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #1486ff;
+    display: flex;
+    /* Centra el icono perfectamente */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.Tareas-btn-editar:hover {
+    background-color: #003e71;
 }
 
 
