@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 const FormularioTareas = () => {
 
     return (
@@ -12,7 +12,7 @@ const FormularioTareas = () => {
                 <button
                     type="submit"
                     className="Formulario-Tareas-btn">
-                    <FontAwesomeIcon icon={faSquarePlus} /> Add
+                    <FontAwesomeIcon icon={faPlus} />
                 </button>
             </form>
         </div>

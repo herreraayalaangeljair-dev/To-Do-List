@@ -6,11 +6,18 @@
     flex-direction: column;
 }
 
+
+.to-do-list-container {
+    background-color: #ffffff;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
 .header-container {
     width: 100%;
     max-width: 500px;
     display: flex;
-    margin-top: 60px;
 }
 
 .header {
@@ -22,7 +29,7 @@
     gap: 20px;
     padding: 16px 24px;
     background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid gray;
     font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -58,10 +65,50 @@
     background-color: #ac202f;
 }
 
+
+.Formulario-Tareas {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.Formulario-Tareas-input {
+    width: 400px;
+    height: 35px;
+    border: none;
+}
+
+.Formulario-Tareas-input:focus {
+    outline: none;
+    border-bottom: 2px solid #28a745;
+}
+
+
+.Formulario-Tareas-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #28a745;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    bottom: 15px;
+}
+
+.Formulario-Tareas-btn:hover {
+    background-color: #206a2e;
+}
+
 .footer {
     width: 100%;
     margin-top: auto;
-    /* ESTO ES LA CLAVE: Empuja el footer hasta abajo */
     padding: 16px;
     background-color: #f8f9fa;
     border-top: 1px solid #dee2e6;
