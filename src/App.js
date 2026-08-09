@@ -1,10 +1,12 @@
 import Header from "./Components/Header";
+import FormularioTareas from "./Components/FormularioTareas";
 
 const App = () => {
     return (
         <div className="container">
             <div className="header-container">
                 <Header />
+                <FormularioTareas />
             </div>
             <footer className="footer">
                 <p className="footer_text">Angel Herrera © 2026</p>
