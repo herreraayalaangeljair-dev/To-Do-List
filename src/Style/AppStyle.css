@@ -12,6 +12,10 @@
     padding: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
+    height: auto;
+    width: auto;
+    max-height: fit-content;
+    max-width: fit-content;
 }
 
 .header-container {
@@ -105,6 +109,23 @@
 .Formulario-Tareas-btn:hover {
     background-color: #206a2e;
 }
+
+
+/* Lista de Tareas */
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.check-input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
 
 .footer {
     width: 100%;
