@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faPencil } from '@fortawesome/free-solid-svg-icons';
 
 const FormularioTareas = ({ tareas, setTareas }) => {
     const [input, setInput] = useState('');
@@ -35,6 +35,11 @@ const FormularioTareas = ({ tareas, setTareas }) => {
                     onChange={handleInput}
                     required
                 ></input>
+                <button
+                    className="Formulario-Tareas-btn-editar"
+                >
+                    <FontAwesomeIcon icon={faPencil} />
+                </button>
                 <button
                     type="submit"
                     className="Formulario-Tareas-btn">
