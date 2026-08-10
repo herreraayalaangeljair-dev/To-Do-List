@@ -102,8 +102,8 @@
     background-color: #28a745;
     position: absolute;
     cursor: pointer;
-    right: 20px;
-    bottom: 15px;
+    right: 5px;
+    bottom: 10px;
 }
 
 .Formulario-Tareas-btn:hover {
@@ -143,25 +143,47 @@
     /* Usa el verde de tu paleta */
 }
 
-/* Botón Editar Mejorado */
-.Tareas-btn-editar {
+/* Contenedor de botones: flexbox alineado a la derecha */
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espacio automático entre el botón de editar y el de borrar */
+}
+
+/* Estilos base compartidos para ambos botones */
+.Tareas-btn-editar,
+.Tareas-btn-borrar {
     cursor: pointer;
     width: 25px;
     height: 23px;
     border: none;
     border-radius: 6px;
     color: white;
-    background-color: #1486ff;
     display: flex;
-    /* Centra el icono perfectamente */
+    /* Habilita el centrado perfecto del icono */
     align-items: center;
     justify-content: center;
     font-size: 14px;
     transition: background-color 0.2s ease;
 }
 
+/* Botón Editar */
+.Tareas-btn-editar {
+    background-color: #1486ff;
+}
+
 .Tareas-btn-editar:hover {
     background-color: #003e71;
+}
+
+/* Botón Borrar */
+.Tareas-btn-borrar {
+    background-color: #fe3232;
+}
+
+.Tareas-btn-borrar:hover {
+    background-color: #a71d1d;
 }
 
 

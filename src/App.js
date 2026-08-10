@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import FormularioTareas from "./Components/FormularioTareas";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencil } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
     const [tareas, setTareas] = useState([]);
@@ -21,8 +21,11 @@ const App = () => {
                                 <p className="task-printed">{tarea.texto}</p>
                             </div>
                             <div className="task-actions">
-                                <button className="Tareas-btn-editar" aria-label="Editar tarea">
+                                <button className="Tareas-btn-editar">
                                     <FontAwesomeIcon icon={faPencil} />
+                                </button>
+                                <button className="Tareas-btn-borrar">
+                                    <FontAwesomeIcon icon={faTrashCan} />
                                 </button>
                             </div>
                         </div>

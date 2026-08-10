@@ -33,7 +33,7 @@ const FormularioTareas = ({ tareas, setTareas }) => {
                     className="Formulario-Tareas-input"
                     placeholder="Write a task"
                     value={input}
-                    onChange={handleInput}
+                    onChange={(e) => handleInput(e)}
                     required
                 ></input>
                 <button
