@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Header from "./Components/Header";
+import ListaTareas from "./Components/ListaTareas";
 import FormularioTareas from "./Components/FormularioTareas";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
 
 const App = () => {
     const [tareas, setTareas] = useState([]);
@@ -13,24 +13,7 @@ const App = () => {
                     <Header />
                 </div>
                 <FormularioTareas tareas={tareas} setTareas={setTareas} />
-                {tareas.map((tarea) => {
-                    return (
-                        <div className="task-container" key={tarea.id}>
-                            <div className="task-content">
-                                <input type="checkbox" className="check-input" />
-                                <p className="task-printed">{tarea.texto}</p>
-                            </div>
-                            <div className="task-actions">
-                                <button className="Tareas-btn-editar">
-                                    <FontAwesomeIcon icon={faPencil} />
-                                </button>
-                                <button className="Tareas-btn-borrar">
-                                    <FontAwesomeIcon icon={faTrashCan} />
-                                </button>
-                            </div>
-                        </div>
-                    );
-                })}
+                <ListaTareas tareas={tareas} />
             </div>
             <footer className="footer">
                 <p className="footer_text">Angel Herrera © 2026</p>
