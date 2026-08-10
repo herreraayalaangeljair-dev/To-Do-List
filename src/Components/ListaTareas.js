@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencil, faTrashCan, faHeartCrack } from '@fortawesome/free-solid-svg-icons';
+import { faHeartCrack } from '@fortawesome/free-solid-svg-icons';
+import Tareas from './Tareas';
 const ListaTareas = ({ tareas }) => {
 
     return (
@@ -10,16 +11,7 @@ const ListaTareas = ({ tareas }) => {
                     return (
                         <div className="task-container" key={tarea.id}>
                             <div className="task-content">
-                                <input type="checkbox" className="check-input" />
-                                <p className="task-printed">{tarea.texto}</p>
-                            </div>
-                            <div className="task-actions">
-                                <button className="Tareas-btn-editar">
-                                    <FontAwesomeIcon icon={faPencil} />
-                                </button>
-                                <button className="Tareas-btn-borrar">
-                                    <FontAwesomeIcon icon={faTrashCan} />
-                                </button>
+                                <Tareas tarea={tarea} />
                             </div>
                         </div>
                     );
