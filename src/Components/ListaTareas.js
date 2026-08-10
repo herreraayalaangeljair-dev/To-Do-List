@@ -11,16 +11,14 @@ const ListaTareas = ({ tareas }) => {
                     return (
                         <div className="task-container" key={tarea.id}>
                             <div className="task-content">
-                                <input type="checkbox" className="check-input" />
-                                <p className="task-printed">{tarea.texto}</p>
+                                <Tareas tarea={tarea} />
                             </div>
-                            <Tareas />
                         </div>
                     );
                 })}
             </div>
             :
-            <div className='Mensaje'><FontAwesomeIcon icon={faHeartCrack} />No hayssss tareddas agregadas</div>
+            <div className='Mensaje'><FontAwesomeIcon icon={faHeartCrack} />No hay tareas agregadas</div>
     )
 }
 
