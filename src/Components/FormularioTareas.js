@@ -9,6 +9,7 @@ const FormularioTareas = ({ tareas, setTareas }) => {
     const handleInput = (e) => {
         setInput(e.target.value);
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartCrack } from '@fortawesome/free-solid-svg-icons';
 import Tareas from './Tareas';
-const ListaTareas = ({ tareas }) => {
+const ListaTareas = ({ tareas, toggleCompletada }) => {
 
     return (
         tareas.length > 0
@@ -11,7 +11,7 @@ const ListaTareas = ({ tareas }) => {
                     return (
                         <div className="task-container" key={tarea.id}>
                             <div className="task-content">
-                                <Tareas tarea={tarea} />
+                                <Tareas tarea={tarea} toggleCompletada={toggleCompletada} />
                             </div>
                         </div>
                     );
