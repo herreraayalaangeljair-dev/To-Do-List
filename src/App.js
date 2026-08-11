@@ -19,6 +19,27 @@ const App = () => {
             return t;
         }));
     }
+
+    const editarTexto = (id, nuevoTexto) => {
+        setTareas(tareas.map((t) => {
+            if (t.id === id) {
+                return {
+                    ...t,
+                    texto: nuevoTexto
+                };
+            }
+            return t;
+        }));
+    }
+
+    const borrarTarea = (id) => {
+        setTareas(tareas.filter((t) => {
+            if (t.id !== id) {
+                return t;
+            }
+            return;
+        }));
+    }
     return (
         <div className="container">
             <div className="to-do-list-container">
@@ -29,7 +50,9 @@ const App = () => {
                 <ListaTareas tareas={
                     mostrarCompletada ? tareas : tareas.filter((t) => !t.completada)
                 }
-                    toggleCompletada={toggleCompletada} />
+                    toggleCompletada={toggleCompletada}
+                    editarTexto={editarTexto}
+                    borrarTarea={borrarTarea} />
             </div>
             <footer className="footer">
                 <p className="footer_text">Angel Herrera © 2026</p>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
-const Tareas = ({ tarea, toggleCompletada }) => {
+const Tareas = ({ tarea, toggleCompletada, editarTexto, borrarTarea }) => {
     const [editandoTarea, tareaEditada] = useState(false);
     const [cambiarTextoGuardar, textoGuardado] = useState(tarea.texto);
 
@@ -12,6 +12,7 @@ const Tareas = ({ tarea, toggleCompletada }) => {
 
     const edittask = (e) => {
         e.preventDefault();
+        editarTexto(tarea.id, cambiarTextoGuardar);
         tareaEditada(false);
     }
 
@@ -41,7 +42,9 @@ const Tareas = ({ tarea, toggleCompletada }) => {
                 <button className="Tareas-btn-editar" onClick={() => changeTask()}>
                     <FontAwesomeIcon icon={faPencil} />
                 </button>
-                <button className="Tareas-btn-borrar">
+                <button className="Tareas-btn-borrar"
+                    onClick={() => borrarTarea(tarea.id)}
+                >
                     <FontAwesomeIcon icon={faTrashCan} />
                 </button>
             </div>
