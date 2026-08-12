@@ -1,12 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import ListaTareas from "./Components/ListaTareas";
 import FormularioTareas from "./Components/FormularioTareas";
 
 
 const App = () => {
-    const [tareas, setTareas] = useState([]);
-    const [mostrarCompletada, setMostrarCompletada] = useState(false);
+    //Obtener datos de las tareas en local storage
+    const obtenerTareas = () => {
+        if (localStorage.getItem("tareas") === null) {
+            return [];
+        } else {
+            return JSON.parse(localStorage.getItem("tareas"));
+        }
+    }
+
+
+    const [tareas, setTareas] = useState(obtenerTareas());
+
+    //Guardar datos de las tareas en local storage
+    useEffect(() => {
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+    }, [tareas]);
+
+    //Obtener datos del header en local storage
+    const obtenerMostrarCompletada = () => {
+        if (localStorage.getItem("mostrarCompletada") === null) {
+            return false;
+        } else {
+            return JSON.parse(localStorage.getItem("mostrarCompletada"));
+        }
+    }
+
+    const [mostrarCompletada, setMostrarCompletada] = useState(obtenerMostrarCompletada());
+
+    //Guardar datos del header en local storage
+    useEffect(() => {
+        localStorage.setItem("mostrarCompletada", JSON.stringify(mostrarCompletada));
+    }, [mostrarCompletada]);
 
     const toggleCompletada = (id) => {
         setTareas(tareas.map((t) => {
